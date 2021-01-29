@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Le bon coin{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="style.css">
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div>
+            <ul>
+                <li><a href=""><strong>Le Bon Coin</strong></a></li>
+                <li><a href="">Déposer une annonce</a></li>
+                <li><a href="">Se déconnecter</a> </li>
+                <li><a href="">Se connecter</a></li>
+                <li><a href="">S'inscrire</a></li>
+            </ul>
+        </div>
+    </header>
+      {% block body %}{% endblock %}
+    <footer>
+        <div class="div_footer">
+            <p>Copyright your Wibsite 2020</p>
+        </div>
+    </footer>   
 
-        {% block javascripts %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+     {% block javascripts %}{% endblock %}
+</body>
 </html>
